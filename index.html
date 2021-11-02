@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Responsive Navbar Using HTML/CSS With Toggle Javascript</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css2?family=Duru+Sans&display=swap');
+      body{
+      margin: 0;
+      font-family: 'Duru Sans', sans-serif;
+      }
+      div{
+      width: 100%;
+      }
+      h1{
+      margin: 0;
+      padding: 20px 40px;
+      color: #fff;
+      font-size: 20px;
+      }
+      nav{
+      display: flex;
+      background-color: #2F86A6;
+      }
+      .fa{
+      display: none;
+      }
+      ul{
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      list-style-type: none;
+      width: 100%;
+      }
+      li{
+      padding: 20px 45px;
+      font-size: 20px;
+      color:#fff;
+      transition: .2s;
+      cursor: pointer;
+      }
+      li:hover{
+      color: #ddd;
+      background: #000;
+      }
+      @media(min-width: 768px){
+      div:nth-child(1){
+      width: 20%;
+      }
+      div:nth-child(2){
+      width: 80%;
+      }
+      }
+      @media(max-width: 992px){
+      li{
+      padding: 20px;
+      }
+      }
+      @media(max-width: 768px){
+      nav,ul{
+      flex-wrap: wrap;
+      text-align: center;
+      }
+      li{
+      width: 100%;
+      }
+      div:nth-child(1){
+      background-color: #0b4b62;
+      }
+      #mobMenu{
+      display: none;
+      transition: .2s;
+      }
+      .fa{
+      display: block;
+      font-size: 36px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 15px;
+      color: #fff;
+      cursor: pointer;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div>
+        <h1>W3hubs</h1>
+        <i class="fa fa-bars" style="font-size:36px" onclick="myFunction()"></i>
+      </div>
+      <div id="mobMenu">
+        <ul>
+          <li><a href="#"></a>Home</li>
+          <li><a href="#"></a>About</li>
+          <li><a href="#"></a>Service</li>
+          <li><a href="#"></a>Contact us</li>
+        </ul>
+      </div>
+    </nav>
+    <script>
+      function myFunction() {
+        var mobMenu = document.getElementById("mobMenu");
+        if (mobMenu.style.display === "block") {
+          mobMenu.style.display = "none";
+        } else {
+          mobMenu.style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>
